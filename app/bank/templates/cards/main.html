@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container p-3" >
+    <h2 class="text-center">Mini Banking Palyground</h1>
+    <div class="row">
+    <div class="col col-lg-6 p-5">
+      <p class="text-center">Register Your Card<p>
+      
+      {% include "cards/register_form.html" %}  
+    </div>
+    <div class="col col-lg-6 p-5">
+      {% include "cards/display_cards.html" %}
+    </div>    
+  </div>
+</div>
+{% endblock %}
