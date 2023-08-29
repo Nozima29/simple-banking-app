@@ -19,3 +19,11 @@ def register(request):
         Card.register(auth_user, name, number, exp_date, cvv)
 
     return render(request, template, context)
+
+
+def deposit_cash(request):
+    pass
+
+
+def withdraw_cash(request):
+    pass
