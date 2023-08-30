@@ -1,5 +1,3 @@
-# Welcome To Beringlab Coding Assignment!
-
 ## Bering Bank
 Build a simulation of 'Bering Bank' that allows users to perform the following operations:
 - Create user account
@@ -10,17 +8,34 @@ Build a simulation of 'Bering Bank' that allows users to perform the following o
 - Withdraw cash
 - Deposit cash
 
-## You can:
-- Use ANY Relational Database you prefer.
-- Install dependencies you find necessary.
+## How to start
 
-## To qualify your expertise you are to:
-- Write code under 'app' project
-- Complete the tests(using pytest)
+    cd app/bank
+    pip install -r requirements.txt
+    python manage.py makemigrations
+    python manage.py migrate
+    
+
+### Launch app in browser
+
+    python manage.py runserver
+
+* Open the app in `http://127.0.0.1:8000/`
+* First create account in `http://127.0.0.1:8000/sign-up/`
+* Then register card in `http://127.0.0.1:8000/card/`and play!
+
+### Run tests
+
+    pytest
+
+> Tests are found in `cards/tests.py` and `users/tests.py`
 
 
-## Extra Credit
-- Use Port and Adapater architecture(To qualify your seniority.)
-- Apply 'State pattern' to manage card's state (reference: https://refactoring.guru/design-patterns/state/python/example)
-- Proper implementation of logging
-- Special case handling(Be creative!) such as event notification on withdrawal of money that's more than a certain amount of money.
+### Create superuser
+
+    python manage.py createsuperuser
+
+> Admin panel can be found in `http://127.0.0.1:8000/admin/`
+
+
+
