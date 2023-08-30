@@ -11,12 +11,12 @@ from sqlalchemy.orm import sessionmaker
 from app.config import get_db_uri
 
 
-
 @pytest.fixture(scope="session", autouse=True)
 def event_loop():
     loop = asyncio.new_event_loop()
     yield loop
     loop.close()
+
 
 @pytest_asyncio.fixture(scope="session", autouse=True)
 async def aio_engine():

@@ -53,7 +53,9 @@ class Card(models.Model):
     def is_valid(self):
         now_year = datetime.now().year
         now_month = datetime.now().month
-        if self.exp_year < now_year and self.exp_month < now_month:
+        exp_year = 2000 + self.exp_year
+        if exp_year < now_year or \
+                exp_year == now_year and self.exp_month < now_month:
             self.state = 'expired'
             self.save()
             return False
