@@ -3,5 +3,5 @@ from cards.views import *
 
 app_name = 'cards'
 urlpatterns = [
-    path('', register, name='register')
+    path('', register, name='register'),
 ]
